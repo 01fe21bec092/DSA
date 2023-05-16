@@ -26,6 +26,7 @@ int main()
     fpush=fopen("push.txt","w");
     fstack=fopen("stack.txt","w+");
     fpop=fopen("pop.txt","w");
+    fop=fopen("op_file.txt","w");
 
     int ch,x;
     printf("Enter the number of random numbers to be generated: ");
@@ -38,8 +39,10 @@ int main()
         switch(ch)
         {
             case 1:push(x);
+                   fprintf(fop,"Push()\n");
                    break;
             case 2:pop();
+                   fprintf(fop,"Pop()\n");
                    fclose(fstack);
                    restore();
                    break;
@@ -47,6 +50,7 @@ int main()
                    fclose(fpush);
                    fclose(fstack);
                    fclose(fpop);
+                   fclose(fop);
                    exit(0);
                    break;
             default :printf("Invalid condition\n");
