@@ -1,3 +1,7 @@
+/* Date : 30/05/2023
+  Title : Implementation of linear queues using arrays in C language with file operations
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 100
