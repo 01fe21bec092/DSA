@@ -1,3 +1,8 @@
+/* Date : 31/05/23
+  Title : Linear queue using linked lists with files in C language
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 20
@@ -95,9 +100,9 @@ fclose(fp);
 }
 
 void restore(QUEUE *q)             // To update queue file after dequeue operation
-{
+{   int i;
     fpq=fopen("queue.txt","w");
-   for(int i=q->front;i<q->rear;i++)
+   for( i=q->front;i<q->rear;i++)
     {
       fprintf(fpq,"%d ",q->a[i]);
     }
